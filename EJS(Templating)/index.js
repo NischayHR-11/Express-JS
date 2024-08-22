@@ -3,8 +3,10 @@ let data=require("./data.json");
 
 let app=express();
 
+app.use(express.static("public"));// like view (need not to metion Full Path);
 app.set("view engine","ejs");
-app.set("view engine",)
+app.set("view",path.join(__dirname,"/Views"));  // able access While Runing this Server In Other Directory.
+app.use(express.static(path.join(__dirname,"/public"))); // able access While Runing this Server In Other Directory.
 
 let port=8080;
 
