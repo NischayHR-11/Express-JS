@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
+    <style>
+        body{
+            background-color: pink;
+            overflow: auto;
+        }
+
+        img{
+
+            height: 100px;
+            width :100px;
+        }
+
+        hr{
+
+            height: 3px;
+            background-color: black;
+            margin-bottom: 25px;
+        }
+    </style>
 </head>
 <body>
     
+    <h1>Profile : <%=datar.name %></h1>
+    <br>
+    <p>
+        <h2>Followers : <%= datar.followers %></h2>
+        <h2>Following : <%= datar.following %></h2>
+    </p>
+    <hr>
+    <% for(x of datar.posts){ %>
+
+        <img src="<%=x.image%>" alt="image">
+        <h3>LIKES : <%= x.likes %></h3>
+        <h3>COMMENTS : <%= x.comments %></h3>
+        <br>
+
+    <% } %>
+
+    <%- include("fotter.ejs") %>
 </body>
 </html>
