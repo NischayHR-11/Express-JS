@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "method-override": "^3.0.0"
   },
   "name": "express-js",
   "version": "1.0.0",
   "description": "This Repo Contains Some Backend Concepts (Server) Implemented Using Express-Js Package (Frame Work).",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
