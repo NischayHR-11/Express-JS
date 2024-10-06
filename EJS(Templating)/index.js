@@ -1,11 +1,12 @@
 let express = require("express");
 let data=require("./data.json");
+let path=require("path");
 
 let app=express();
 
 app.use(express.static("public"));// like view (need not to metion Full Path);
 app.set("view engine","ejs");
-app.set("view",path.join(__dirname,"/Views"));  // able access While Runing this Server In Other Directory.
+app.set("views",path.join(__dirname,"/Views"));  // able access While Runing this Server In Other Directory.
 app.use(express.static(path.join(__dirname,"/public"))); // able access While Runing this Server In Other Directory.
 
 let port=8080;
@@ -35,6 +36,6 @@ app.get("/insta/:username",(req,res)=>{
 
     let {username}=req.params;
     let datar=data[username];
-    console.log(datar);
+    console.log(username);
     res.render("Instagram.ejs",{datar});
 })
