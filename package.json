@@ -9,6 +9,7 @@
   "description": "This Repo Contains Some Backend Concepts (Server) Implemented Using Express-Js Package (Frame Work).",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
